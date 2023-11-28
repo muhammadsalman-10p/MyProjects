@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="aspnet-core-3-registration-login-api-master\**" />
+    <Compile Remove="AssignmentProject\**" />
+    <Content Remove="aspnet-core-3-registration-login-api-master\**" />
+    <Content Remove="AssignmentProject\**" />
+    <EmbeddedResource Remove="aspnet-core-3-registration-login-api-master\**" />
+    <EmbeddedResource Remove="AssignmentProject\**" />
+    <None Remove="aspnet-core-3-registration-login-api-master\**" />
+    <None Remove="AssignmentProject\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\BookController - Copy.cs" />
+    <Compile Remove="Controllers\UserController - Copy.cs" />
+    <Compile Remove="Helpers\DataContext.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="2021-09-23_logfile.txt" />
+    <None Remove="2021-09-24_logfile.txt" />
+    <None Remove="internallog.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="NLog" Version="4.7.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AssignmentProject.Application\AssignmentProject.Application.csproj" />
+    <ProjectReference Include="..\AssignmentProject.Infrastructure\AssignmentProject.Infrastructure.csproj" />
+    <ProjectReference Include="..\LoggingService\LoggingService.csproj" />
+  </ItemGroup>
+
+
+</Project>
