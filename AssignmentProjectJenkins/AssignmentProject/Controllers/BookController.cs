@@ -79,7 +79,6 @@ namespace AssignmentProject.Controllers
                 await _serviceWrapper.BookService.Create(model);
             }
             return Ok();
-
         }
     }
 }
