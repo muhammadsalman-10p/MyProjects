@@ -53,7 +53,7 @@ namespace AssignmentProject.Tests
             var result = await _bookController.GetBook(id);
 
             var viewRessult = Assert.IsType<BadRequestObjectResult>(result);
-            Assert.Equal("Invalid id", viewRessult.Value);
+            Assert.Equal("Invalid id - fest failed", viewRessult.Value);
             //Assert.IsAssignableFrom<BookModel>(viewRessult.Value);
         }
         [Fact]
